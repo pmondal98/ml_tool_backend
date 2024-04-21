@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-MlToolApplication<ml_tool>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.bits.ml_tool.MlToolApplication",
+      "projectName": "ml_tool",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

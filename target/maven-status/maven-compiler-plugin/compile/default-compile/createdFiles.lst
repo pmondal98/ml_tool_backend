@@ -1,0 +1,11 @@
+com\bits\ml_tool\controller\CSVImporter.class
+com\bits\ml_tool\entities\LuMessage.class
+com\bits\ml_tool\MlToolApplication.class
+com\bits\ml_tool\dao\LuMessageRepository.class
+com\bits\ml_tool\entities\LuLanguage.class
+com\bits\ml_tool\entities\Translate.class
+com\bits\ml_tool\dao\LuMessageLangRepository.class
+com\bits\ml_tool\controller\TranslationController.class
+com\bits\ml_tool\controller\CSVExporter.class
+com\bits\ml_tool\dao\LuLanguageRepository.class
+com\bits\ml_tool\entities\LuMessageLang.class
