@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bits.ml_tool.dao.LuLanguageRepository;
 import com.bits.ml_tool.dao.LuMessageRepository;
+import com.bits.ml_tool.dao.SendEmailService;
 import com.bits.ml_tool.entities.LuLanguage;
 import com.bits.ml_tool.entities.VendorTranslationMap;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,6 +33,9 @@ public class TranslationController {
 
     @Autowired
     private CSVImporter csvImporter;
+
+    @Autowired
+    private SendEmailService sendEmailService;
 
     @GetMapping(value = "/getLanguage")
     public List<LuLanguage> getLanguage() {
@@ -91,6 +95,13 @@ public class TranslationController {
         }
         csvImporter.importFromCSV(records, updateRecords);
         return "SUCCESS";
+    }
+
+    @GetMapping(value = "/sendemail/{languageCode}")
+    public String sendEmail(@PathVariable("languageCode") String languageCode) {
+        sendEmailService.sendEmail("prabhasmondal.09.02.1999@gmail.com",
+                "Import Successfull", "Import Strings");
+        return "Sent Successfully";
     }
 
 }
